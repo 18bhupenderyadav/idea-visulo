@@ -1,0 +1,52 @@
+// Coding Rainbow
+// Daniel Shiffman
+// http://patreon.com/codingtrain
+// Code for: https://youtu.be/0jjeOYMjmDU
+
+var angle = 0;
+var slider1,slider2;
+var length;
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+function setup() {
+
+    let cnv=createCanvas(500, 500);
+    
+    cnv.parent("square");
+    //cnv.center();
+    //cnv.position(50,100);
+    slider1 = createSlider(10, 200,100, 10);
+    //sli.center();
+    //sli.position(50,500);
+    slider1.parent("slider1");
+    slider2 = createSlider(0, TWO_PI, PI / 4, 0.01);
+    slider2.parent("slider2");
+}
+
+function draw() {
+    background(51);
+    angle = slider2.value();
+    stroke(255);
+    translate(250, height);
+    length=slider1.value();
+    branch(length);
+
+}
+
+function branch(len) {
+    line(0, 0, 0, -len);
+    translate(0, -len);
+    if (len > length/75) {
+        push();
+        rotate(angle);
+        branch(len * 0.67);
+        pop();
+        push();
+        rotate(-angle);
+        branch(len * 0.67);
+        pop();
+    }
+
+    //line(0, 0, 0, -len * 0.67);
+}

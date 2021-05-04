@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#items-heading {
+    padding: 1.5rem;
+}
+
+
+#animation{
+    padding: 2.5rem;
+}
+#desc{
+    padding: 2.5rem;
+}
+#slider1{
+    padding: 2rem;
+}
+#slider2{
+    padding: 2rem;
+}
+
+
+
+#square {
+ float: left;
+    margin: 10px 10px 0 0;
+    width: 100%;
+}
+
+#square canvas {
+    width: 100% !important;
+    height: auto !important;
+}
