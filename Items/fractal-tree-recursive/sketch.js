@@ -12,16 +12,15 @@ var h = window.innerHeight;
 function setup() {
 
     let cnv=createCanvas(500, 500);
-    
     cnv.parent("square");
-    //cnv.center();
-    //cnv.position(50,100);
+
     slider1 = createSlider(10, 200,100, 10);
-    //sli.center();
-    //sli.position(50,500);
     slider1.parent("slider1");
+    slider1.size(400, 20);
+
     slider2 = createSlider(0, TWO_PI, PI / 4, 0.01);
     slider2.parent("slider2");
+    slider2.size(400, 20);
 }
 
 function draw() {
@@ -37,7 +36,7 @@ function draw() {
 function branch(len) {
     line(0, 0, 0, -len);
     translate(0, -len);
-    if (len > length/75) {
+    if (len > length/80) {
         push();
         rotate(angle);
         branch(len * 0.67);
