@@ -36,7 +36,7 @@ function draw() {
 function branch(len) {
     line(0, 0, 0, -len);
     translate(0, -len);
-    if (len > length/80) {
+    if (len > length/25) {
         push();
         rotate(angle);
         branch(len * 0.67);
