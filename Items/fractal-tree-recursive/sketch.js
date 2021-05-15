@@ -1,7 +1,3 @@
-// Coding Rainbow
-// Daniel Shiffman
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/0jjeOYMjmDU
 
 var angle = 0;
 var slider1,slider2;
@@ -14,11 +10,11 @@ function setup() {
     let cnv=createCanvas(500, 500);
     cnv.parent("square");
 
-    slider1 = createSlider(10, 200,100, 10);
+    slider1 = createSlider(10, 200,100, 1);
     slider1.parent("slider1");
     slider1.size(400, 20);
 
-    slider2 = createSlider(0, TWO_PI, PI / 4, 0.01);
+    slider2 = createSlider(0, PI, PI / 4, 0.01);
     slider2.parent("slider2");
     slider2.size(400, 20);
 }
